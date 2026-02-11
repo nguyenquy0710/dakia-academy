@@ -5,6 +5,10 @@
 DAKIA Academy là nền tảng đào tạo trực tuyến chuyên sâu, được thiết kế đặc biệt để trang bị cho nhân viên của DAKIA Tech những kiến thức và kỹ năng tiên tiến trong việc ứng dụng công nghệ AI vào các hoạt động bán hàng và marketing.
 
 > 📋 **[Xem chi tiết các tính năng của nền tảng](FEATURES.md)**
+> 
+> 🚀 **[Hướng dẫn cài đặt và chạy ứng dụng](SETUP.md)**
+> 
+> 👨‍💻 **[Hướng dẫn phát triển cho developers](AGENTS.md)**
 
 ## 🎯 Mục tiêu
 
@@ -73,6 +77,57 @@ Từ **người mới bắt đầu** đến **những người đã có kinh ngh
 ## 🏆 Cam kết
 
 DAKIA Tech cam kết triển khai đào tạo này để nâng cao năng lực của đội ngũ, từ đó thúc đẩy sự phát triển bền vững và gia tăng cạnh tranh trên thị trường.
+
+## 🚀 Bắt đầu nhanh
+
+### Cài đặt
+
+```bash
+# Clone repository
+git clone https://github.com/nguyenquy0710/dakia-academy.git
+cd dakia-academy
+
+# Cài đặt dependencies
+npm install
+
+# Cấu hình môi trường
+cp .env.example .env.local
+# Chỉnh sửa .env.local với thông tin MongoDB của bạn
+
+# Chạy development server
+npm run dev
+```
+
+Truy cập http://localhost:3000 để xem ứng dụng.
+
+### Tài liệu
+
+- **[SETUP.md](SETUP.md)**: Hướng dẫn cài đặt chi tiết
+- **[AGENTS.md](AGENTS.md)**: Hướng dẫn phát triển
+- **[FEATURES.md](FEATURES.md)**: Danh sách tính năng
+- **[.github/copilot-instructions.md](.github/copilot-instructions.md)**: Coding conventions
+
+## 📊 Trạng thái dự án
+
+✅ **Phase 1 - MVP**: Đang phát triển
+- ✅ Cấu trúc dự án cơ bản
+- ✅ Database models (User, Course, Content)
+- ✅ UI cơ bản (Client & Admin)
+- ✅ API routes cơ bản
+- ⏳ Authentication system
+- ⏳ Full CRUD operations
+
+🔜 **Phase 2 - Core Features**: Sắp tới
+- Progress tracking
+- Search & filtering
+- User profiles
+- Rich content support
+
+🔮 **Phase 3 - Advanced Features**: Tương lai
+- AI recommendations
+- Chatbot support
+- Gamification
+- Analytics & reporting
 
 ## 📄 License
 
