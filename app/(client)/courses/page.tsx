@@ -17,7 +17,7 @@ const CoursesPage: FC = () => {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* Example course card */}
-        <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+        <a href="/courses/ai-for-sales" className="bg-white p-6 rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition">
           <div className="bg-gradient-to-r from-blue-500 to-purple-600 h-32 rounded-lg mb-4"></div>
           <h3 className="text-xl font-semibold mb-2">AI cho Sales</h3>
           <p className="text-gray-600 mb-4">
@@ -25,9 +25,9 @@ const CoursesPage: FC = () => {
           </p>
           <div className="flex justify-between items-center">
             <span className="text-sm text-gray-500">Beginner</span>
-            <span className="text-sm text-blue-600 font-semibold">Sắp ra mắt</span>
+            <span className="text-sm text-blue-600 font-semibold">Xem chi tiết →</span>
           </div>
-        </div>
+        </a>
 
         <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
           <div className="bg-gradient-to-r from-green-500 to-teal-600 h-32 rounded-lg mb-4"></div>

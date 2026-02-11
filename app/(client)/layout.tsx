@@ -19,6 +19,9 @@ const ClientLayout: FC<ClientLayoutProps> = ({ children }) => {
                 <a href="/courses" className="hover:underline">Khóa học</a>
               </li>
               <li>
+                <a href="/login" className="hover:underline">Đăng nhập</a>
+              </li>
+              <li>
                 <a href="/admin" className="hover:underline">Quản trị</a>
               </li>
             </ul>
