@@ -78,4 +78,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**DAKIA Academy** - *Empowering Sales & Marketing with AI*
+**DAKIA Academy** - *Tăng cường Bán hàng & Marketing với AI / Empowering Sales & Marketing with AI*
