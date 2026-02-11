@@ -48,7 +48,8 @@ async function getCourse(slug: string) {
 }
 
 export async function generateMetadata({ params }: CoursePageProps) {
-  const course = await getCourse(params.slug);
+  const { slug } = await params;
+  const course = await getCourse(slug);
   
   if (!course) {
     return {
@@ -63,7 +64,8 @@ export async function generateMetadata({ params }: CoursePageProps) {
 }
 
 const CoursePage: FC<CoursePageProps> = async ({ params }) => {
-  const course = await getCourse(params.slug);
+  const { slug } = await params;
+  const course = await getCourse(slug);
 
   if (!course) {
     notFound();
