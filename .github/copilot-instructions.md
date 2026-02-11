@@ -75,7 +75,7 @@ dakia-academy/
 │       └── ai-for-marketing/
 ├── public/                       # Static assets
 ├── .env.local                    # Environment variables
-├── next.config.js               # Next.js configuration
+├── next.config.ts               # Next.js configuration
 ├── package.json
 └── tsconfig.json
 ```
@@ -250,7 +250,7 @@ const isValid = await bcrypt.compare(password, hashedPassword);
 
 ### Environment Variables
 ```bash
-# .env.local (KHÔNG commit file này)
+# .env.local (DO NOT commit this file)
 MONGODB_URI=mongodb://...
 JWT_SECRET=your-secret-key
 NEXTAUTH_SECRET=your-nextauth-secret
@@ -644,9 +644,9 @@ export const translations = {
 
 ## ⚠️ Common Pitfalls to Avoid
 
-1. **Không mã hóa passwords** - Luôn hash passwords với bcrypt
+1. **Bỏ qua mã hóa passwords** - Luôn hash passwords với bcrypt
 2. **Hardcode credentials** - Dùng environment variables
-3. **Không validate input** - Validate mọi user input
+3. **Bỏ qua validate input** - Validate mọi user input
 4. **Ignore error handling** - Proper error handling ở mọi nơi
 5. **Poor database indexing** - Index các fields thường query
 6. **No loading states** - Luôn hiển thị loading states
