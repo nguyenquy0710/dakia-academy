@@ -6,49 +6,57 @@ interface AdminLayoutProps {
 
 const AdminLayout: FC<AdminLayoutProps> = ({ children }) => {
   return (
-    <div className="min-h-screen flex">
+    <div className="d-flex min-vh-100">
       {/* Sidebar */}
-      <aside className="w-64 bg-gray-800 text-white">
-        <div className="p-6">
-          <h1 className="text-2xl font-bold">DAKIA Admin</h1>
+      <aside className="bg-dark text-white d-flex flex-column" style={{ width: '280px' }}>
+        <div className="p-4 border-bottom border-secondary">
+          <h1 className="h4 fw-bold mb-0">DAKIA Admin</h1>
         </div>
-        <nav className="mt-6">
+        <nav className="flex-grow-1 py-3">
           <a 
             href="/admin/dashboard" 
-            className="block px-6 py-3 hover:bg-gray-700 transition"
+            className="d-block text-white text-decoration-none px-4 py-3 hover-bg-secondary"
           >
+            <i className="bi bi-speedometer2 me-2"></i>
             📊 Dashboard
           </a>
           <a 
             href="/admin/users" 
-            className="block px-6 py-3 hover:bg-gray-700 transition"
+            className="d-block text-white text-decoration-none px-4 py-3 hover-bg-secondary"
           >
+            <i className="bi bi-people me-2"></i>
             👥 Quản lý người dùng
           </a>
           <a 
             href="/admin/courses" 
-            className="block px-6 py-3 hover:bg-gray-700 transition"
+            className="d-block text-white text-decoration-none px-4 py-3 hover-bg-secondary"
           >
+            <i className="bi bi-book me-2"></i>
             📚 Quản lý khóa học
           </a>
+        </nav>
+        <div className="border-top border-secondary">
           <a 
             href="/" 
-            className="block px-6 py-3 hover:bg-gray-700 transition mt-6 border-t border-gray-700"
+            className="d-block text-white text-decoration-none px-4 py-3 hover-bg-secondary"
           >
+            <i className="bi bi-arrow-left me-2"></i>
             ← Về trang chủ
           </a>
-        </nav>
+        </div>
       </aside>
 
       {/* Main content */}
-      <div className="flex-1 flex flex-col">
-        <header className="bg-white shadow-sm">
-          <div className="px-8 py-4">
-            <h2 className="text-xl font-semibold">Quản trị hệ thống</h2>
+      <div className="flex-grow-1 d-flex flex-column">
+        <header className="bg-white shadow-sm border-bottom">
+          <div className="px-4 py-3">
+            <h2 className="h5 fw-semibold mb-0">Quản trị hệ thống</h2>
           </div>
         </header>
-        <main className="flex-1 p-8 bg-gray-50">
-          {children}
+        <main className="flex-grow-1 p-4 bg-light">
+          <div className="container-fluid">
+            {children}
+          </div>
         </main>
       </div>
     </div>
