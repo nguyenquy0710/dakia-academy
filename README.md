@@ -4,6 +4,8 @@
 
 DAKIA Academy là nền tảng đào tạo trực tuyến chuyên sâu, được thiết kế đặc biệt để trang bị cho nhân viên của DAKIA Tech những kiến thức và kỹ năng tiên tiến trong việc ứng dụng công nghệ AI vào các hoạt động bán hàng và marketing.
 
+> 📋 **[Xem chi tiết các tính năng của nền tảng](FEATURES.md)**
+
 ## 🎯 Mục tiêu
 
 Giúp nhân viên nắm bắt và tận dụng tối đa các công cụ AI, DAKIA Academy cung cấp các khóa học, bài giảng và bài tập thực hành nhằm:
