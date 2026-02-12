@@ -125,8 +125,8 @@ const HomePage: FC = () => {
         <div className="row g-4">
           <div className="col-md-6">
             <div className="card h-100 border-0 shadow-soft hover-lift" style={{ 
-              background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%)',
-              borderLeft: '4px solid #6366f1'
+              background: 'linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(6, 182, 212, 0.05) 100%)',
+              borderLeft: '4px solid #2563EB'
             }}>
               <div className="card-body p-4">
                 <div className="d-flex align-items-center mb-3">
@@ -238,7 +238,7 @@ const HomePage: FC = () => {
       <section className="mb-5">
         <div className="card border-0 shadow-lg rounded-xl overflow-hidden">
           <div className="card-body p-5" style={{ 
-            background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.03) 0%, rgba(139, 92, 246, 0.03) 100%)'
+            background: 'linear-gradient(135deg, rgba(37, 99, 235, 0.03) 0%, rgba(6, 182, 212, 0.03) 100%)'
           }}>
             <div className="text-center mb-5">
               <h2 className="display-5 fw-bold mb-3">💡 Lợi ích vượt trội</h2>

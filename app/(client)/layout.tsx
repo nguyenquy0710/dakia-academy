@@ -9,7 +9,7 @@ const ClientLayout: FC<ClientLayoutProps> = ({ children }) => {
     <div className="d-flex flex-column min-vh-100">
       {/* Modern Navbar with Glassmorphism */}
       <nav className="navbar navbar-expand-lg navbar-dark shadow-sm" style={{ 
-        background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+        background: 'linear-gradient(135deg, #2563EB 0%, #06B6D4 100%)',
         backdropFilter: 'blur(10px)'
       }}>
         <div className="container">
