@@ -13,7 +13,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="vi">
+    <html
+      lang="vi"
+      suppressHydrationWarning={true}
+      data-lt-installed="true"
+    >
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
