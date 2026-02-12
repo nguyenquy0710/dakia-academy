@@ -68,9 +68,10 @@
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  background: linear-gradient(to bottom, var(--gray-50) 0%, var(--gray-100) 100%);
-  color: var(--gray-800);
-  line-height: 1.6;
+  background: #ffffff;
+  color: var(--gray-900);
+  line-height: 1.8;
+  font-size: 1.125rem;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -143,22 +144,12 @@ html {
   animation: scaleIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Modern Gradients */
+/* Modern Gradients - Clean Framer Style */
 .hero-gradient {
-  background: linear-gradient(135deg, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.04) 0%, rgba(6, 182, 212, 0.04) 100%);
   position: relative;
   overflow: hidden;
-}
-
-.hero-gradient::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
-  opacity: 0.5;
+  border-radius: var(--radius-xl);
 }
 
 .gradient-primary {
@@ -173,19 +164,19 @@ html {
   background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
 }
 
-/* Enhanced Card Styles */
+/* Enhanced Card Styles - Clean Framer Style */
 .card {
-  border: none;
+  border: 1px solid var(--gray-200);
   border-radius: var(--radius-lg);
   background: white;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .card-hover-glow:hover {
@@ -201,11 +192,11 @@ html {
   box-shadow: var(--shadow-lg);
 }
 
-/* Modern Buttons */
+/* Modern Buttons - Clean Framer Style */
 .btn {
   font-weight: 600;
   border-radius: var(--radius-md);
-  padding: 0.625rem 1.5rem;
+  padding: 0.75rem 2rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: none;
   position: relative;
@@ -213,14 +204,15 @@ html {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%);
+  background: var(--bs-primary);
   color: white;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, var(--bs-primary-dark) 0%, var(--primary-gradient-start) 100%);
+  background: var(--bs-primary-dark);
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
 }
 
 .btn-outline-primary {

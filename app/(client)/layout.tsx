@@ -7,22 +7,15 @@ interface ClientLayoutProps {
 const ClientLayout: FC<ClientLayoutProps> = ({ children }) => {
   return (
     <div className="d-flex flex-column min-vh-100">
-      {/* Modern Navbar with Glassmorphism */}
-      <nav className="navbar navbar-expand-lg navbar-dark shadow-sm" style={{ 
-        background: 'linear-gradient(135deg, #2563EB 0%, #06B6D4 100%)',
-        backdropFilter: 'blur(10px)'
+      {/* Clean Navbar - Framer Style */}
+      <nav className="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top" style={{ 
+        backdropFilter: 'blur(10px)',
+        boxShadow: '0 1px 3px rgba(0,0,0,0.05)'
       }}>
         <div className="container">
-          <a className="navbar-brand fw-bold fs-3" href="/" style={{ letterSpacing: '-0.5px' }}>
-            <span className="d-inline-block" style={{ 
-              background: 'linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.8) 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text'
-            }}>
-              DAKIA
-            </span>{' '}
-            <span style={{ fontWeight: 400 }}>Academy</span>
+          <a className="navbar-brand fw-bold fs-4" href="/" style={{ letterSpacing: '-0.5px' }}>
+            <span style={{ color: '#2563EB' }}>DAKIA</span>{' '}
+            <span style={{ color: '#0F172A', fontWeight: 400 }}>Academy</span>
           </a>
           <button 
             className="navbar-toggler border-0" 
@@ -36,28 +29,28 @@ const ClientLayout: FC<ClientLayoutProps> = ({ children }) => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ms-auto gap-2">
+            <ul className="navbar-nav ms-auto gap-3 align-items-center">
               <li className="nav-item">
-                <a className="nav-link px-3 rounded" href="/" style={{ transition: 'all 0.3s ease' }}>
-                  🏠 Trang chủ
+                <a className="nav-link fw-medium" href="/" style={{ color: '#475569' }}>
+                  Trang chủ
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link px-3 rounded" href="/courses" style={{ transition: 'all 0.3s ease' }}>
-                  📚 Khóa học
+                <a className="nav-link fw-medium" href="/courses" style={{ color: '#475569' }}>
+                  Khóa học
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link px-3 rounded" href="/login" style={{ transition: 'all 0.3s ease' }}>
-                  🔐 Đăng nhập
+                <a className="nav-link fw-medium" href="/login" style={{ color: '#475569' }}>
+                  Đăng nhập
                 </a>
               </li>
               <li className="nav-item">
                 <a 
-                  className="btn btn-light btn-sm fw-semibold px-3" 
+                  className="btn btn-primary btn-sm fw-semibold px-4" 
                   href="/admin"
                   style={{ 
-                    borderRadius: '2rem',
+                    borderRadius: '0.5rem',
                     transition: 'all 0.3s ease'
                   }}
                 >
