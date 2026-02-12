@@ -3,36 +3,88 @@ import { FC } from 'react';
 const HomePage: FC = () => {
   return (
     <div>
-      {/* Hero Section */}
-      <section className="hero-gradient text-white text-center rounded-3 py-5 mb-5 fade-in">
-        <div className="container">
-          <h1 className="display-3 fw-bold mb-3 animate__animated animate__fadeInDown">
+      {/* Hero Section with Modern Design */}
+      <section className="hero-gradient text-white text-center rounded-xl py-5 mb-5 fade-in position-relative" style={{ overflow: 'hidden' }}>
+        <div className="container position-relative" style={{ zIndex: 1 }}>
+          <div className="mb-4">
+            <span className="badge bg-white bg-opacity-25 text-white px-4 py-2 rounded-pill mb-3">
+              🎓 Platform đào tạo AI hàng đầu
+            </span>
+          </div>
+          <h1 className="display-2 fw-bold mb-4" style={{ 
+            lineHeight: '1.2',
+            fontFamily: 'Plus Jakarta Sans, sans-serif'
+          }}>
             DAKIA Academy
           </h1>
-          <p className="display-6 mb-4">
+          <p className="display-6 mb-4 fw-light">
             Đào tạo AI cho Sale và Marketing
           </p>
-          <p className="lead mb-4 px-md-5">
+          <p className="lead mb-5 px-md-5 mx-auto" style={{ maxWidth: '800px', fontSize: '1.25rem', lineHeight: '1.8' }}>
             Nền tảng đào tạo trực tuyến chuyên sâu, được thiết kế đặc biệt để trang bị cho nhân viên của DAKIA Tech 
             những kiến thức và kỹ năng tiên tiến trong việc ứng dụng công nghệ AI vào các hoạt động bán hàng và marketing.
           </p>
-          <a 
-            href="/courses" 
-            className="btn btn-light btn-lg px-5 py-3 fw-semibold shadow-sm hover-lift"
-          >
-            Khám phá khóa học
-          </a>
+          <div className="d-flex gap-3 justify-content-center flex-wrap">
+            <a 
+              href="/courses" 
+              className="btn btn-light btn-lg px-5 py-3 fw-semibold rounded-pill shadow-lg hover-lift"
+              style={{ fontSize: '1.1rem' }}
+            >
+              🚀 Khám phá khóa học
+            </a>
+            <a 
+              href="/register" 
+              className="btn btn-outline-light btn-lg px-5 py-3 fw-semibold rounded-pill hover-lift"
+              style={{ fontSize: '1.1rem' }}
+            >
+              📝 Đăng ký ngay
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="mb-5">
+        <div className="row g-4 text-center">
+          <div className="col-md-4">
+            <div className="card border-0 shadow-soft hover-lift h-100">
+              <div className="card-body p-4">
+                <div className="display-4 fw-bold text-gradient mb-2">100+</div>
+                <p className="text-muted mb-0">Học viên đã tham gia</p>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-4">
+            <div className="card border-0 shadow-soft hover-lift h-100">
+              <div className="card-body p-4">
+                <div className="display-4 fw-bold text-gradient mb-2">10+</div>
+                <p className="text-muted mb-0">Khóa học chất lượng</p>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-4">
+            <div className="card border-0 shadow-soft hover-lift h-100">
+              <div className="card-body p-4">
+                <div className="display-4 fw-bold text-gradient mb-2">95%</div>
+                <p className="text-muted mb-0">Mức độ hài lòng</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Goals Section */}
-      <section className="mb-5 fade-in">
-        <h2 className="text-center display-5 fw-bold mb-5">🎯 Mục tiêu</h2>
+      <section className="mb-5 fade-in-up">
+        <div className="text-center mb-5">
+          <h2 className="display-5 fw-bold mb-3">🎯 Mục tiêu của chúng tôi</h2>
+          <p className="text-muted lead">Giúp bạn phát triển kỹ năng AI trong kinh doanh</p>
+        </div>
         <div className="row g-4">
           <div className="col-md-4">
-            <div className="card h-100 border-0 shadow hover-lift">
-              <div className="card-body p-4">
-                <h3 className="card-title h5 fw-semibold mb-3">Nâng cao năng suất</h3>
+            <div className="card h-100 border-0 shadow-soft hover-lift card-hover-glow">
+              <div className="card-body p-5 text-center">
+                <div className="mb-4" style={{ fontSize: '3rem' }}>📈</div>
+                <h3 className="card-title h5 fw-bold mb-3">Nâng cao năng suất</h3>
                 <p className="card-text text-muted">
                   Thông qua tự động hóa và tối ưu hóa quy trình làm việc
                 </p>
@@ -40,9 +92,10 @@ const HomePage: FC = () => {
             </div>
           </div>
           <div className="col-md-4">
-            <div className="card h-100 border-0 shadow hover-lift">
-              <div className="card-body p-4">
-                <h3 className="card-title h5 fw-semibold mb-3">Tối ưu marketing</h3>
+            <div className="card h-100 border-0 shadow-soft hover-lift card-hover-glow">
+              <div className="card-body p-5 text-center">
+                <div className="mb-4" style={{ fontSize: '3rem' }}>🎯</div>
+                <h3 className="card-title h5 fw-bold mb-3">Tối ưu marketing</h3>
                 <p className="card-text text-muted">
                   Bằng cách sử dụng phân tích dữ liệu thông minh
                 </p>
@@ -50,9 +103,10 @@ const HomePage: FC = () => {
             </div>
           </div>
           <div className="col-md-4">
-            <div className="card h-100 border-0 shadow hover-lift">
-              <div className="card-body p-4">
-                <h3 className="card-title h5 fw-semibold mb-3">Tăng trưởng doanh thu</h3>
+            <div className="card h-100 border-0 shadow-soft hover-lift card-hover-glow">
+              <div className="card-body p-5 text-center">
+                <div className="mb-4" style={{ fontSize: '3rem' }}>💰</div>
+                <h3 className="card-title h5 fw-bold mb-3">Tăng trưởng doanh thu</h3>
                 <p className="card-text text-muted">
                   Thông qua cá nhân hóa và hiểu rõ khách hàng
                 </p>
@@ -64,52 +118,115 @@ const HomePage: FC = () => {
 
       {/* Technology Areas */}
       <section className="mb-5">
-        <h2 className="text-center display-5 fw-bold mb-5">🚀 Các lĩnh vực công nghệ AI</h2>
+        <div className="text-center mb-5">
+          <h2 className="display-5 fw-bold mb-3">🚀 Các lĩnh vực công nghệ AI</h2>
+          <p className="text-muted lead">Khám phá những công nghệ tiên tiến nhất</p>
+        </div>
         <div className="row g-4">
           <div className="col-md-6">
-            <div className="card border-primary border-2 h-100 hover-lift">
+            <div className="card h-100 border-0 shadow-soft hover-lift" style={{ 
+              background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%)',
+              borderLeft: '4px solid #6366f1'
+            }}>
               <div className="card-body p-4">
-                <h3 className="card-title h5 fw-semibold mb-3">📊 Phân tích dữ liệu lớn</h3>
-                <ul className="list-unstyled">
-                  <li className="mb-2">✓ Phân tích hành vi khách hàng</li>
-                  <li className="mb-2">✓ Dự đoán xu hướng thị trường</li>
-                  <li className="mb-2">✓ Phân khúc khách hàng thông minh</li>
+                <div className="d-flex align-items-center mb-3">
+                  <div className="me-3" style={{ fontSize: '2.5rem' }}>📊</div>
+                  <h3 className="card-title h5 fw-bold mb-0">Phân tích dữ liệu lớn</h3>
+                </div>
+                <ul className="list-unstyled ms-5">
+                  <li className="mb-2 d-flex align-items-center">
+                    <span className="badge bg-primary me-2">✓</span>
+                    Phân tích hành vi khách hàng
+                  </li>
+                  <li className="mb-2 d-flex align-items-center">
+                    <span className="badge bg-primary me-2">✓</span>
+                    Dự đoán xu hướng thị trường
+                  </li>
+                  <li className="mb-2 d-flex align-items-center">
+                    <span className="badge bg-primary me-2">✓</span>
+                    Phân khúc khách hàng thông minh
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
           <div className="col-md-6">
-            <div className="card border-info border-2 h-100 hover-lift">
+            <div className="card h-100 border-0 shadow-soft hover-lift" style={{ 
+              background: 'linear-gradient(135deg, rgba(6, 182, 212, 0.05) 0%, rgba(8, 145, 178, 0.05) 100%)',
+              borderLeft: '4px solid #06b6d4'
+            }}>
               <div className="card-body p-4">
-                <h3 className="card-title h5 fw-semibold mb-3">🤖 Tự động hóa Marketing</h3>
-                <ul className="list-unstyled">
-                  <li className="mb-2">✓ Tự động hóa chiến dịch marketing</li>
-                  <li className="mb-2">✓ Quản lý và phân phối nội dung thông minh</li>
-                  <li className="mb-2">✓ Email marketing cá nhân hóa</li>
+                <div className="d-flex align-items-center mb-3">
+                  <div className="me-3" style={{ fontSize: '2.5rem' }}>🤖</div>
+                  <h3 className="card-title h5 fw-bold mb-0">Tự động hóa Marketing</h3>
+                </div>
+                <ul className="list-unstyled ms-5">
+                  <li className="mb-2 d-flex align-items-center">
+                    <span className="badge bg-info me-2">✓</span>
+                    Tự động hóa chiến dịch marketing
+                  </li>
+                  <li className="mb-2 d-flex align-items-center">
+                    <span className="badge bg-info me-2">✓</span>
+                    Quản lý và phân phối nội dung thông minh
+                  </li>
+                  <li className="mb-2 d-flex align-items-center">
+                    <span className="badge bg-info me-2">✓</span>
+                    Email marketing cá nhân hóa
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
           <div className="col-md-6">
-            <div className="card border-success border-2 h-100 hover-lift">
+            <div className="card h-100 border-0 shadow-soft hover-lift" style={{ 
+              background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(5, 150, 105, 0.05) 100%)',
+              borderLeft: '4px solid #10b981'
+            }}>
               <div className="card-body p-4">
-                <h3 className="card-title h5 fw-semibold mb-3">👥 Cá nhân hóa trải nghiệm</h3>
-                <ul className="list-unstyled">
-                  <li className="mb-2">✓ Đề xuất sản phẩm/dịch vụ phù hợp</li>
-                  <li className="mb-2">✓ Tương tác khách hàng tự động</li>
-                  <li className="mb-2">✓ Chatbot và hỗ trợ khách hàng AI</li>
+                <div className="d-flex align-items-center mb-3">
+                  <div className="me-3" style={{ fontSize: '2.5rem' }}>👥</div>
+                  <h3 className="card-title h5 fw-bold mb-0">Cá nhân hóa trải nghiệm</h3>
+                </div>
+                <ul className="list-unstyled ms-5">
+                  <li className="mb-2 d-flex align-items-center">
+                    <span className="badge bg-success me-2">✓</span>
+                    Đề xuất sản phẩm/dịch vụ phù hợp
+                  </li>
+                  <li className="mb-2 d-flex align-items-center">
+                    <span className="badge bg-success me-2">✓</span>
+                    Tương tác khách hàng tự động
+                  </li>
+                  <li className="mb-2 d-flex align-items-center">
+                    <span className="badge bg-success me-2">✓</span>
+                    Chatbot và hỗ trợ khách hàng AI
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
           <div className="col-md-6">
-            <div className="card border-warning border-2 h-100 hover-lift">
+            <div className="card h-100 border-0 shadow-soft hover-lift" style={{ 
+              background: 'linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, rgba(217, 119, 6, 0.05) 100%)',
+              borderLeft: '4px solid #f59e0b'
+            }}>
               <div className="card-body p-4">
-                <h3 className="card-title h5 fw-semibold mb-3">🧠 Công cụ hỗ trợ quyết định</h3>
-                <ul className="list-unstyled">
-                  <li className="mb-2">✓ Dự báo doanh số</li>
-                  <li className="mb-2">✓ Tối ưu hóa giá cả</li>
-                  <li className="mb-2">✓ Phân tích cạnh tranh</li>
+                <div className="d-flex align-items-center mb-3">
+                  <div className="me-3" style={{ fontSize: '2.5rem' }}>🧠</div>
+                  <h3 className="card-title h5 fw-bold mb-0">Công cụ hỗ trợ quyết định</h3>
+                </div>
+                <ul className="list-unstyled ms-5">
+                  <li className="mb-2 d-flex align-items-center">
+                    <span className="badge bg-warning text-dark me-2">✓</span>
+                    Dự báo doanh số
+                  </li>
+                  <li className="mb-2 d-flex align-items-center">
+                    <span className="badge bg-warning text-dark me-2">✓</span>
+                    Tối ưu hóa giá cả
+                  </li>
+                  <li className="mb-2 d-flex align-items-center">
+                    <span className="badge bg-warning text-dark me-2">✓</span>
+                    Phân tích cạnh tranh
+                  </li>
                 </ul>
               </div>
             </div>
@@ -117,43 +234,80 @@ const HomePage: FC = () => {
         </div>
       </section>
 
-      {/* Benefits */}
-      <section className="bg-light rounded-3 p-5 mb-5">
-        <h2 className="text-center display-5 fw-bold mb-5">💡 Lợi ích</h2>
-        <div className="row g-5">
-          <div className="col-md-6">
-            <h3 className="h4 fw-semibold mb-4 text-primary">Cho nhân viên:</h3>
-            <ul className="list-unstyled">
-              <li className="mb-3">
-                <span className="badge bg-primary me-2">✓</span>
-                Nâng cao kỹ năng chuyên môn
-              </li>
-              <li className="mb-3">
-                <span className="badge bg-primary me-2">✓</span>
-                Tăng khả năng cạnh tranh trên thị trường lao động
-              </li>
-              <li className="mb-3">
-                <span className="badge bg-primary me-2">✓</span>
-                Cải thiện hiệu suất công việc
-              </li>
-            </ul>
+      {/* Benefits Section with Modern Card Design */}
+      <section className="mb-5">
+        <div className="card border-0 shadow-lg rounded-xl overflow-hidden">
+          <div className="card-body p-5" style={{ 
+            background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.03) 0%, rgba(139, 92, 246, 0.03) 100%)'
+          }}>
+            <div className="text-center mb-5">
+              <h2 className="display-5 fw-bold mb-3">💡 Lợi ích vượt trội</h2>
+              <p className="text-muted lead">Mang lại giá trị thiết thực cho cả cá nhân và tổ chức</p>
+            </div>
+            <div className="row g-5">
+              <div className="col-md-6">
+                <div className="card border-0 shadow-soft h-100">
+                  <div className="card-body p-4">
+                    <h3 className="h4 fw-bold mb-4 text-gradient">
+                      👤 Cho nhân viên
+                    </h3>
+                    <ul className="list-unstyled">
+                      <li className="mb-3 d-flex align-items-start">
+                        <span className="badge gradient-primary text-white me-3 mt-1" style={{ minWidth: '28px' }}>✓</span>
+                        <span>Nâng cao kỹ năng chuyên môn với kiến thức AI tiên tiến</span>
+                      </li>
+                      <li className="mb-3 d-flex align-items-start">
+                        <span className="badge gradient-primary text-white me-3 mt-1" style={{ minWidth: '28px' }}>✓</span>
+                        <span>Tăng khả năng cạnh tranh trên thị trường lao động</span>
+                      </li>
+                      <li className="mb-3 d-flex align-items-start">
+                        <span className="badge gradient-primary text-white me-3 mt-1" style={{ minWidth: '28px' }}>✓</span>
+                        <span>Cải thiện hiệu suất công việc đáng kể</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-6">
+                <div className="card border-0 shadow-soft h-100">
+                  <div className="card-body p-4">
+                    <h3 className="h4 fw-bold mb-4 text-gradient">
+                      🏢 Cho DAKIA Tech
+                    </h3>
+                    <ul className="list-unstyled">
+                      <li className="mb-3 d-flex align-items-start">
+                        <span className="badge gradient-success text-white me-3 mt-1" style={{ minWidth: '28px' }}>✓</span>
+                        <span>Nâng cao năng lực cạnh tranh của đội ngũ</span>
+                      </li>
+                      <li className="mb-3 d-flex align-items-start">
+                        <span className="badge gradient-success text-white me-3 mt-1" style={{ minWidth: '28px' }}>✓</span>
+                        <span>Thúc đẩy sự phát triển bền vững của doanh nghiệp</span>
+                      </li>
+                      <li className="mb-3 d-flex align-items-start">
+                        <span className="badge gradient-success text-white me-3 mt-1" style={{ minWidth: '28px' }}>✓</span>
+                        <span>Gia tăng sức cạnh tranh trên thị trường</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="col-md-6">
-            <h3 className="h4 fw-semibold mb-4 text-success">Cho DAKIA Tech:</h3>
-            <ul className="list-unstyled">
-              <li className="mb-3">
-                <span className="badge bg-success me-2">✓</span>
-                Nâng cao năng lực của đội ngũ
-              </li>
-              <li className="mb-3">
-                <span className="badge bg-success me-2">✓</span>
-                Thúc đẩy sự phát triển bền vững
-              </li>
-              <li className="mb-3">
-                <span className="badge bg-success me-2">✓</span>
-                Gia tăng sức cạnh tranh trên thị trường
-              </li>
-            </ul>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="text-center py-5 mb-4">
+        <div className="card border-0 shadow-xl rounded-xl overflow-hidden">
+          <div className="card-body p-5 hero-gradient text-white">
+            <h2 className="display-5 fw-bold mb-3">Bắt đầu hành trình học tập của bạn</h2>
+            <p className="lead mb-4">Tham gia cùng hàng trăm học viên khác tại DAKIA Academy</p>
+            <a 
+              href="/courses" 
+              className="btn btn-light btn-lg px-5 py-3 fw-semibold rounded-pill shadow-lg hover-lift"
+            >
+              🎓 Khám phá khóa học ngay
+            </a>
           </div>
         </div>
       </section>
