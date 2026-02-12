@@ -103,9 +103,13 @@ const CoursePage: FC<CoursePageProps> = async ({ params }) => {
         {/* Main Content */}
         <div className="col-lg-8">
           {/* About Section */}
-          <div className="card border-0 shadow-sm mb-4 hover-lift">
+          <div className="card border-0 shadow-sm mb-4 hover-lift" style={{
+            background: 'linear-gradient(135deg, rgba(37, 99, 235, 0.02) 0%, rgba(6, 182, 212, 0.02) 100%)'
+          }}>
             <div className="card-body p-4">
-              <h2 className="h4 fw-bold mb-3">Về khóa học này</h2>
+              <h2 className="h4 fw-bold mb-3">
+                <span className="text-gradient">Về khóa học này</span>
+              </h2>
               <p className="text-muted mb-0">
                 {course.description}
               </p>
@@ -115,27 +119,36 @@ const CoursePage: FC<CoursePageProps> = async ({ params }) => {
           {/* Course Curriculum */}
           <div className="card border-0 shadow-sm mb-4 hover-lift">
             <div className="card-body p-4">
-              <h2 className="h4 fw-bold mb-4">Nội dung khóa học</h2>
+              <h2 className="h4 fw-bold mb-4">
+                <span className="text-gradient">Nội dung khóa học</span>
+              </h2>
               <div className="d-grid gap-3">
                 {course.lessons.map((lesson, index) => (
                   <div
                     key={lesson.id}
-                    className="border rounded-3 p-3 hover-lift"
-                    style={{ cursor: 'pointer', transition: 'all 0.3s ease' }}
+                    className="lesson-card border rounded-3 p-3 position-relative"
+                    style={{ 
+                      cursor: 'pointer', 
+                      borderLeft: '4px solid #2563EB !important'
+                    }}
                   >
                     <div className="d-flex justify-content-between align-items-start">
                       <div className="d-flex gap-3">
                         <div 
-                          className="d-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary rounded-circle fw-semibold"
-                          style={{ width: '32px', height: '32px', flexShrink: 0 }}
+                          className="d-flex align-items-center justify-content-center text-white rounded-circle fw-semibold"
+                          style={{ 
+                            width: '36px', 
+                            height: '36px', 
+                            flexShrink: 0,
+                            background: 'linear-gradient(135deg, #2563EB 0%, #06B6D4 100%)'
+                          }}
                         >
                           {index + 1}
                         </div>
                         <div>
                           <h3 className="h6 fw-semibold mb-1">{lesson.title}</h3>
                           <p className="text-muted small mb-0">
-                            <i className="bi bi-clock me-1"></i>
-                            {lesson.duration} phút
+                            ⏱️ {lesson.duration} phút
                           </p>
                         </div>
                       </div>
@@ -164,29 +177,43 @@ const CoursePage: FC<CoursePageProps> = async ({ params }) => {
 
         {/* Sidebar */}
         <div className="col-lg-4">
-          <div className="card border-0 shadow-sm sticky-top" style={{ top: '1.5rem' }}>
+          <div className="card border-0 shadow-sm sticky-top" style={{ 
+            top: '1.5rem',
+            background: 'linear-gradient(135deg, rgba(37, 99, 235, 0.02) 0%, rgba(6, 182, 212, 0.02) 100%)'
+          }}>
             <div className="card-body p-4">
-              <h3 className="h5 fw-bold mb-4">Bắt đầu học ngay</h3>
+              <h3 className="h5 fw-bold mb-4">
+                <span className="text-gradient">Bắt đầu học ngay</span>
+              </h3>
               
               <div className="mb-4">
                 <div className="d-flex justify-content-between mb-3 pb-3 border-bottom">
                   <span className="text-muted">Tổng số bài học:</span>
-                  <span className="fw-semibold">{course.lessons.length}</span>
+                  <span className="fw-semibold text-primary">{course.lessons.length}</span>
                 </div>
                 <div className="d-flex justify-content-between mb-3 pb-3 border-bottom">
                   <span className="text-muted">Thời lượng:</span>
-                  <span className="fw-semibold">
+                  <span className="fw-semibold text-primary">
                     {course.lessons.reduce((acc, l) => acc + (l.duration || 0), 0)} phút
                   </span>
                 </div>
                 <div className="d-flex justify-content-between">
                   <span className="text-muted">Cấp độ:</span>
-                  <span className="fw-semibold text-capitalize">{course.level}</span>
+                  <span className="badge rounded-pill" style={{
+                    background: 'linear-gradient(135deg, #2563EB 0%, #06B6D4 100%)',
+                    color: 'white'
+                  }}>
+                    {course.level === 'beginner' ? 'Beginner' : 
+                     course.level === 'intermediate' ? 'Intermediate' : 'Advanced'}
+                  </span>
                 </div>
               </div>
 
               <div className="d-grid gap-2 mb-4">
-                <button className="btn btn-primary btn-lg fw-semibold">
+                <button className="btn btn-primary btn-lg fw-semibold" style={{
+                  background: 'linear-gradient(135deg, #2563EB 0%, #06B6D4 100%)',
+                  border: 'none'
+                }}>
                   Đăng ký khóa học
                 </button>
                 <button className="btn btn-outline-primary btn-lg fw-semibold">
@@ -198,19 +225,19 @@ const CoursePage: FC<CoursePageProps> = async ({ params }) => {
                 <h4 className="h6 fw-semibold mb-3">Bạn sẽ học được gì?</h4>
                 <ul className="list-unstyled small">
                   <li className="d-flex align-items-start gap-2 mb-2">
-                    <span className="text-success">✓</span>
+                    <span className="text-success fw-bold">✓</span>
                     <span>Hiểu về AI và ứng dụng trong bán hàng</span>
                   </li>
                   <li className="d-flex align-items-start gap-2 mb-2">
-                    <span className="text-success">✓</span>
+                    <span className="text-success fw-bold">✓</span>
                     <span>Phân tích dữ liệu khách hàng thông minh</span>
                   </li>
                   <li className="d-flex align-items-start gap-2 mb-2">
-                    <span className="text-success">✓</span>
+                    <span className="text-success fw-bold">✓</span>
                     <span>Tự động hóa quy trình bán hàng</span>
                   </li>
                   <li className="d-flex align-items-start gap-2 mb-2">
-                    <span className="text-success">✓</span>
+                    <span className="text-success fw-bold">✓</span>
                     <span>Tối ưu hóa chiến lược sales</span>
                   </li>
                 </ul>
