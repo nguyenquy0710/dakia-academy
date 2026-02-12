@@ -11,6 +11,11 @@
       "Bash(pnpm typecheck:*)",
       "Bash(popd)",
       "Bash(pushd:*)"
+    ],
+    "deny": [
+      "Bash(rm -rf *)",
+      "Bash(npm publish)",
+      "Bash(git push)"
     ]
   }
 }
